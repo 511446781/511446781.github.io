@@ -8,6 +8,6 @@
    - [jq拖拉](https://511446781.github.io/project/jq)
 + css3
 
-    - [loading](https://511446781.github.io/project/loading\index.html)
+    - [loading](https://511446781.github.io/project/loading)
     - [loading&css3](https://511446781.github.io/project/loading&css3)
     - [千与千寻](https://511446781.github.io/project/千与千寻)
