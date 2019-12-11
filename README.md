@@ -1,12 +1,12 @@
 # 项目展示
  + html&css
-   - [种地](https://511446781.github.io/cultivation)
+   - [种地](https://511446781.github.io/project/cultivation)
  + javaScript
-   - [飞机小游戏](https://511446781.github.io/05-plane)
-   - [图片放大镜](https://511446781.github.io/图片放大镜)
+   - [飞机小游戏](https://511446781.github.io/project/05-plane)
+   - [图片放大镜](https://511446781.github.io/project/图片放大镜)
 + jQuery
-   - [jq拖拉](https://511446781.github.io/jq)
+   - [jq拖拉](https://511446781.github.io/project/jq)
 + css3
-    - [loading](https://511446781.github.io/loading)
-    - [loading&css3](https://511446781.github.io/loading)
-    - [千与千寻](https://511446781.github.io/千与千寻/index)
+    - [loading](https://511446781.github.io/project/loading)
+    - [loading&css3](https://511446781.github.io/project/loading&css3)
+    - [千与千寻](https://511446781.github.io/project/千与千寻)
