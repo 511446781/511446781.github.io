@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+    <title>Document</title>
+    <style>
+        .silent input{
+display: none;
+        }
+        .switch{
+            width: 80px;
+            height: 40px;
+            background: lightgray;
+            padding: 5px;
+            transition: all 0.3s;
+            border-radius: 100px;
+            overflow: hidden;
+        }
+        .switch .wrap {
+				width: 150%;
+				height: 100%;
+				overflow: hidden;
+				transition: inherit;
+				margin-left: -50%;
+			}
+			.switch .dot {
+				width: 40px;
+				height: 100%;
+				background: white;
+
+				border-radius: 100px;
+				float: left;
+			}
+			.switch span {
+				width: 40px;
+				line-height: 40px;
+				display: block;
+				float: left;
+				text-align: center;
+				color: white;
+				font-size: 12px;
+			}
+			.switch.active {
+				background: lightseagreen;
+			}
+			.switch.active .wrap {
+				margin-left: 0;
+			}
+    </style>
+    <style>
+        body{
+            background:lightcoral;
+        }
+        .bigbox {
+            width: 1600px;
+            height: 700px;
+            background: red;
+            border: solid 10px blue;
+            /* padding: 20px; */
+            overflow: hidden;
+            background: url("./l1.jpg") no-repeat;
+            background-size: 100%;
+            margin: 0 auto;
+        }
+
+        .drag {
+            display: block;
+            margin: 0 auto;
+            width: 60px;
+            height: 60px;
+            background: black;
+            position: absolute;
+            bottom: -25px;
+            left: 50%;
+            right: 50%;
+            border-radius: 50%;
+        }
+
+        .top {
+            width: 100%;
+            height: 30px;
+            ;
+            background: lawngreen;
+            /* background: white */
+            background: url("./l2.jpg") no-repeat;
+            background-size: 100%;
+            z-index: 1;
+            border-bottom: 5px dashed white;
+        }
+
+        .box {
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bigbox">
+        <div class="box">
+            <span class="drag"></span>
+            <div class="top"></div>
+        </div>
+        <div class="bottom"></div>
+    </div>
+
+    <label class="mySwitch silent">
+        <input type="checkbox" name="silent">
+        <span></span>
+        <div class="switch">
+            <div class="wrap">
+                <span>ON</span>
+                <div class="dot"></div>
+                <span>OFF</span>
+            </div>
+        </div>
+    </label>
+    <script>
+        // var x = 0
+        $(".drag").mousedown(function () {
+            console.log("xxx");
+            
+            // x++
+            // if (x % 2 == 0) {
+                $(".bigbox").mousemove(function () {
+                    $(".drag").css("background", "#ffffff")
+                    console.log($(".top").innerHeight());
+
+                    // console.log(event.pageX,event.pageY);
+
+                    $(".top").css("height", event.pageY - 30 + "px")
+
+                })
+                $(".drag").mouseover(function () {
+                    $(this).css("background", "#ffffff")
+                });
+                $(".drag").mouseout(function () {
+                    $(this).css("background", "black")
+                });
+            // }else (
+       
+
+        })
+        $(".drag").mouseup(function () {
+            // $(".top").css("height", 0 - 30 + "px")
+                $(".bigbox").unbind('mousemove')
+        }) 
+      
+    </script>
+        <script>
+            function switchFunc() {
+                     console.log($(".silent input").prop("checked"));
+                     // console.log($(this).val());
+                     if ($(".silent input").prop("checked")) {
+                         $(".silent input")
+                             .siblings(".switch")
+                             .addClass("active");
+                     } else {
+                         $(".silent input")
+                             .siblings(".switch")
+                             .removeClass("active");
+                     }
+                 }
+                 $(".mySwitch")
+                     .find("input")
+                     .change(switchFunc);
+     
+                 if (document.cookie) {
+                     $(".mySwitch")
+                         .find("input")
+                         .prop("checked", true);
+                     switchFunc();
+                 }
+         </script>
+</body>
+
+</html>

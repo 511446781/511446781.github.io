@@ -1,0 +1,506 @@
+ul,
+li {
+  list-style: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Poppins', sans-serif;
+}
+nav.navbar {
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+nav.navbar .navbar-header button.navbar-toggle {
+  border: none;
+}
+nav.navbar .navbar-header .navbar-brand {
+  font-size: 36px;
+  font-family: "Srisakdi", cursive;
+  color: #fc427b;
+  font-weight: bold;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li {
+  margin: 0 15px;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li.open a {
+  background: none;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li:hover a {
+  background: none;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li a {
+  font-size: 16px;
+  font-weight: 400;
+  color: #333333;
+  transition: all 0.3s;
+  padding-left: 0;
+  padding-right: 0;
+  text-align: center;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li a.active {
+  color: #fc427b;
+  background: none;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li a:hover {
+  color: #fc427b;
+  background: none;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu {
+  background: none;
+  border-radius: 5px;
+  padding: 10px;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu li {
+  margin: 0;
+}
+nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu li a {
+  color: #333333;
+}
+section.banner ol.carousel-indicators {
+  bottom: 30px;
+}
+section.banner ol.carousel-indicators li {
+  width: 16px;
+  height: 16px;
+  background: #fc427b;
+  border: 4px solid white;
+  margin: 0 5px;
+}
+section.banner ol.carousel-indicators li.active {
+  background: white;
+}
+section.banner ol.carousel-indicators li:hover {
+  background: white;
+}
+section.banner .carousel-inner .item {
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+}
+section.banner .carousel-inner .item:nth-child(1) {
+  background-image: url("../images/2.jpg");
+}
+section.banner .carousel-inner .item:nth-child(2) {
+  background-image: url("../images/1.jpg");
+}
+section.banner .carousel-inner .item:nth-child(3) {
+  background-image: url("../images/4.jpg");
+}
+section.banner .carousel-inner .item .caption {
+  padding-top: 250px;
+  text-align: right;
+  color: white;
+}
+section.banner .carousel-inner .item .caption h5 {
+  font-size: 16px;
+  color: #333333;
+  font-weight: normal;
+  line-height: 2em;
+}
+section.banner .carousel-inner .item .caption h3 {
+  font-size: 24px;
+  font-weight: bolder;
+  text-shadow: 2px 5px 3px rgba(0, 0, 0, 0.06);
+  line-height: 1.5em;
+}
+section.banner .carousel-inner .item .caption a.btn {
+  margin-top: 20px;
+  background: #fc427b;
+  border: 2px solid white;
+  color: white;
+  font-weight: normal;
+  transition: all 0.3s;
+  font-size: 14px;
+  text-transform: uppercase;
+  padding: 15px 30px;
+}
+section.banner .carousel-inner .item .caption a.btn:hover {
+  background: white;
+  color: #333333;
+}
+.container .row.three {
+  margin-top: 50px;
+}
+.container .row.three h3 {
+  font-size: 40px;
+  font-weight: 100;
+}
+.container .row.three h5 {
+  font-size: 24px;
+  font-family: initial;
+  font-style: italic !important;
+}
+.container .row.three span {
+  background: #fc427b;
+  border: 2px solid white;
+  border-radius: 50%;
+  padding: 25px;
+  font-size: 28px;
+  color: white;
+}
+.container .row.three .col-xs-6 .top {
+  font-weight: 500;
+  font-size: 22px;
+}
+.container .row.three .col-xs-6 .botton {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 100;
+  line-height: 2em;
+}
+.stage .container ul {
+  color: white;
+  margin-bottom: 100px;
+  margin-top: 100px;
+  list-style: none;
+  text-align: center;
+}
+.stage .container ul li span {
+  border-radius: 50%;
+  font-size: 32px;
+  padding: 25px;
+  border: 2px solid white;
+  margin-bottom: 50px;
+}
+.stage .container ul li h4 {
+  font-weight: bold;
+  font-size: 1.5em;
+  text-transform: uppercase;
+}
+.stage .container ul li p {
+  font-size: 15px;
+  font-family: "Sintony", sans-serif;
+  font-weight: 100;
+  line-height: 2em;
+}
+.container.copies {
+  margin-bottom: 100px;
+}
+.container.copies .row {
+  text-align: center;
+}
+.container.copies .row h3 {
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 30px;
+  font-weight: 400;
+}
+.container.copies .row h5 {
+  font-size: 16px;
+  margin-bottom: 50px;
+}
+.container.copies .box {
+  position: relative;
+}
+.container.copies .box img {
+  width: 100%;
+  height: 100%;
+}
+.container.copies .box h3 {
+  font-size: 30px;
+  margin: 0;
+  background: #38d2fe;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  color: white;
+  padding: 10px 25px;
+  left: 0;
+}
+.container.copies .box h3 span {
+  font-size: 16px;
+  font-weight: 100;
+  display: block;
+}
+.container.copies .list h4 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+  font-size: 25px;
+}
+.container.copies .list ul {
+  margin: 0;
+  padding: 0;
+  height: 24px;
+}
+.container.copies .list ul li {
+  color: #999;
+  margin-right: 15px;
+  float: left;
+}
+.container.copies .list ul li span {
+  color: #fc427b;
+}
+.container.copies .list p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.9em;
+  letter-spacing: 1.6px;
+}
+.container-fluid.tagging {
+  min-height: 600px;
+  background-image: url("../images/bg2.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  color: white;
+}
+.container-fluid.tagging .container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container-fluid.tagging .container .row span {
+  font-size: 26px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #999;
+}
+.container-fluid.tagging .container .row h3 {
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 1.5em;
+  letter-spacing: 1px;
+  padding: 0;
+}
+.container-fluid.tagging .container .row p {
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+.gallery {
+  margin-bottom: 100px;
+}
+.gallery .row .container {
+  margin-top: 80px;
+  text-align: center;
+}
+.gallery .row .container h3 {
+  font-size: 32px;
+}
+.gallery .row .container p {
+  color: #999;
+  font-size: 16px;
+  letter-spacing: 1px;
+  margin-bottom: 20px;
+}
+.gallery .container {
+  padding-left: 25px;
+  padding-right: 25px;
+}
+.gallery .row div[class^=col] {
+  padding: 5px;
+}
+.gallery .row div[class^=col] img {
+  border-radius: 5px;
+  width: 100%;
+}
+#myModal .modal-body img {
+  width: 100%;
+}
+#myModal .modal-footer span {
+  display: block;
+}
+#myModal .modal-footer span:first-child {
+  float: left;
+}
+#myModal .modal-footer span:last-child {
+  float: right;
+}
+.foot {
+  background-image: url("../images/bg3.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  text-align: center;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-position: center;
+}
+.foot .container h3 {
+  margin-bottom: 20px;
+  color: white;
+  font-size: 32px;
+  font-weight: bold;
+}
+.foot .container p {
+  margin-bottom: 25px;
+  color: white;
+}
+.foot .container input {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  margin-bottom: 10px;
+}
+.foot .container .last {
+  background: #38d2fe;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+.container.register {
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+.container.register .Contact {
+  text-align: center;
+}
+.container.register .Contact p {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+.container.register .boxleft .boxtop {
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0px 0px 2px 0px;
+}
+.container.register .boxsright {
+  padding: 25px;
+  box-shadow: 0px 0px 2px 0px;
+}
+.container.register .boxsright div {
+  width: 100%;
+}
+.container.register .boxsright input {
+  padding: 15px;
+  border: none;
+  width: 100%;
+  border-bottom: 1px solid black;
+}
+.container.register .boxsright textarea {
+  border: none;
+  width: 100%;
+  line-height: 3em;
+  resize: none;
+  padding-left: 15px;
+  border-bottom: 1px solid black;
+}
+.container.register .boxsright .boxinput {
+  border: none;
+  margin: 15px 0;
+  background: #fc427b;
+  line-height: 1em;
+}
+.container.register h4 {
+  color: #38d2fe;
+  margin-bottom: 20px;
+}
+.container.register p {
+  color: #999;
+  margin: 0px;
+  font-size: 14px;
+  line-height: 1.7em;
+  font-weight: 100;
+  font-family: 'Sintony', sans-serif;
+}
+.container-fluid.stern {
+  background: #212020;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: white;
+  border-bottom: 1 solid white;
+}
+.container-fluid.stern h3 {
+  margin-bottom: 50px;
+}
+.container-fluid.stern h4 {
+  margin-bottom: 15px;
+}
+.container-fluid.stern p {
+  color: #999;
+  line-height: 2em;
+  letter-spacing: 1px;
+}
+.container-fluid.stern li {
+  margin-bottom: 25px;
+  font-size: 16px;
+  letter-spacing: 1px;
+  color: #999;
+}
+.container-fluid.rump {
+  background: #212020;
+  color: #999;
+  text-align: center;
+  letter-spacing: 2px;
+  font-size: 15px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+.container-fluid.rump span {
+  color: #fc427b;
+  font-size: 25px;
+  padding: 15px;
+}
+.container-fluid.rump a {
+  color: #fc427b;
+}
+/* 超小屏幕（手机，小于 768px） */
+/* 没有任何媒体查询相关的代码，因为这在 Bootstrap 中是默认的（还记得 Bootstrap 是移动设备优先的吗？） */
+/* 小屏幕（平板，大于等于 768px） */
+@media (min-width: 768px) {
+  nav.navbar {
+    padding: 10px 50px;
+  }
+  nav.navbar .navbar-collapse ul.navbar-nav li a {
+    text-align: left;
+  }
+  nav.navbar .navbar-collapse ul.navbar-nav li:hover ul.dropdown-menu {
+    display: block;
+  }
+  nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu {
+    background: #333333;
+  }
+  nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu li a {
+    color: white;
+    transition: all 0.3s;
+    padding: 5px 10px;
+  }
+  nav.navbar .navbar-collapse ul.navbar-nav li ul.dropdown-menu li a:hover {
+    color: #333333;
+    background: white;
+  }
+  section.banner .carousel-inner .item {
+    height: 500px;
+  }
+  section.banner .carousel-inner .item .caption {
+    padding-top: 130px;
+  }
+  section.banner .carousel-inner .item .caption h5 {
+    font-size: 18px;
+  }
+  section.banner .carousel-inner .item .caption h3 {
+    font-size: 30px;
+  }
+}
+/* 中等屏幕（桌面显示器，大于等于 992px） */
+@media (min-width: 992px) {
+  section.banner .carousel-inner .item {
+    height: 600px;
+  }
+  section.banner .carousel-inner .item .caption {
+    padding-top: 170px;
+  }
+  section.banner .carousel-inner .item .caption h5 {
+    font-size: 20px;
+  }
+  section.banner .carousel-inner .item .caption h3 {
+    font-size: 40px;
+  }
+}
+/* 大屏幕（大桌面显示器，大于等于 1200px） */
+@media (min-width: 1200px) {
+  section.banner .carousel-inner .item {
+    height: 720px;
+  }
+  section.banner .carousel-inner .item .caption {
+    padding-top: 250px;
+  }
+  section.banner .carousel-inner .item .caption h5 {
+    font-size: 25px;
+  }
+  section.banner .carousel-inner .item .caption h3 {
+    font-size: 50px;
+  }
+}
+/*# sourceMappingURL=./style.css.map */

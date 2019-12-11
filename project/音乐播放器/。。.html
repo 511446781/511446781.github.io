@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+        
+    </canvas>
+    <script>
+        /** @type {HTMLCanvasElement} */
+        var c=document.getElementById("myCanvas");
+var ctx=c.getContext("2d");
+ctx.beginPath();
+ctx.arc(300,300,200,0,2*Math.PI);
+ctx.fillStyle="#07beea"
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(300,320,160,0,2*Math.PI);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.rect(230,160,70,40);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(265,170,35,0,Math.PI,true);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+
+ctx.arc(265,190,35,0,Math.PI,);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.rect(300,160,70,40);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.arc(335,170,35,0,Math.PI,true);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+
+ctx.beginPath();
+ctx.arc(285,190,10,0,2*Math.PI,);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+
+ctx.arc(335,190,35,0,Math.PI,);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+
+ctx.arc(300,240,15,0,2*Math.PI,);
+ctx.fillStyle="red"
+ctx.fill();
+ctx.stroke();
+ctx.beginPath();
+ctx.arc(315,190,10,0,2*Math.PI,);
+ctx.fillStyle="white"
+ctx.fill();
+ctx.stroke();
+
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(300,255);
+ctx.lineTo(300,400);
+ctx.stroke();
+
+// 胡须
+ctx.beginPath();
+ctx.moveTo(420,340);
+ctx.quadraticCurveTo(300,460,170,340);
+ctx.stroke();
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(170,255);
+ctx.lineTo(260,270);
+ctx.stroke();
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(430,255);
+ctx.lineTo(340,270);
+ctx.stroke();
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(170,285);
+ctx.lineTo(260,300);
+ctx.stroke();
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(440,285);
+ctx.lineTo(350,300);
+ctx.stroke();
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(440,315);
+ctx.lineTo(350,330);
+ctx.stroke();
+ctx.beginPath();
+ctx.lineCap="round";
+ctx.moveTo(260,325);
+ctx.lineTo(170,310);
+ctx.stroke();
+    </script>
+</body>
+</html>
