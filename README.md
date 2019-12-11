@@ -9,4 +9,4 @@
 + css3
     - [loading](https://511446781.github.io/loading)
     - [loading&css3](https://511446781.github.io/loading)
-    - [千与千寻](https://511446781.github.io/千与千寻)
+    - [千与千寻](https://511446781.github.io/千与千寻/index)
