@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="referrer" content="never" />
+		<title>Document</title>
+		<style>
+			.grid-item {
+				float: left;
+				width: 200px;
+				/* border: 1px solid orange; */
+				margin-bottom: 10px;
+				padding: 10px;
+				box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.15);
+			}
+			.grid-item img {
+				width: 100%;
+				vertical-align: middle;
+			}
+			button {
+				width: 100%;
+				height: 50px;
+				background: red;
+			}
+			.test .grid-item {
+				width: 20px;
+                display: none;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="grid">
+			<!-- <div class="grid-item">
+				<img src="http://ww1.sinaimg.cn/large/0065oQSqly1fsq9iq8ttrj30k80q9wi4.jpg" alt="" />
+			</div> -->
+		</div>
+		<div class="test"></div>
+		<button class="append-button">btn</button>
+		<script src="https://cdn.staticfile.org/jquery/1.12.4/jquery.min.js"></script>
+		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+		<script src="https://unpkg.com/imagesloaded@4.1.4/imagesloaded.pkgd.min.js"></script>
+
+		<script>
+			var pageNum = 0;
+			// init Masonry
+			var $grid = $(".grid").masonry({
+				// options...
+				// set itemSelector so .grid-sizer is not used in layout
+				itemSelector: ".grid-item",
+				// use element for option
+				columnWidth: 220,
+				percentPosition: true,
+				gutter: 10
+			});
+			// layout Masonry after each image loads
+			$grid.imagesLoaded().progress(function() {
+				$grid.masonry("layout");
+			});
+
+			// var $grid = $(".grid").imagesLoaded(function() {
+			// 	// init Masonry after all images have loaded
+			// 	$grid.masonry({
+			// 		// 	itemSelector: ".grid-item",
+			// 		// use element for option
+			// 		columnWidth: ".grid-item",
+			// 		percentPosition: true,
+			// 		gutter: 10
+			// 	});
+			// });
+			function xxx() {
+				// does work
+				$.get(
+					"https://api.apiopen.top/getImages",
+					{
+						page: ++pageNum,
+						count: 5
+					},
+					function(data) {
+						$.each(data.result, function(i, e) {
+							var $content = $(
+								'<div class="grid-item"><img src="' + e.img + '" alt="' + e.time + '" /></div>'
+							);
+							// add jQuery object
+							// $grid.append($content).masonry("appended", $content);
+							$(".test").append($content);
+						});
+						$(".test")
+							.imagesLoaded()
+							.always(function() {
+								console.log("all images loaded");
+								var $content = $(".test").children();
+								$grid.append($content).masonry("appended", $content);
+							});
+					}
+				);
+			}
+			$(".append-button").click(function(e) {
+				e.preventDefault();
+				xxx();
+			});
+			xxx();
+
+			
+		</script>
+	</body>
+</html>
