@@ -2,7 +2,7 @@
  + html&css
    - [种地](https://511446781.github.io/project/cultivation)
  + javaScript
-   - [飞机小游戏](https://511446781.github.io/project/05-plane)
+   - [飞机小游戏](https://511446781.github.io/project/飞机)
    - [图片放大镜](https://511446781.github.io/project/图片放大镜)
 + jQuery
    - [jq拖拉](https://511446781.github.io/project/jq)
