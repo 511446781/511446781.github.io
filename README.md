@@ -16,6 +16,7 @@
 + css3
     - [3d旋转](https://511446781.github.io/project/正方形3D旋转)
     - [loading](https://511446781.github.io/project/loading)
+    - [loading2](https://511446781.github.io/project/loading2)
     - [css3点击变色](https://511446781.github.io/project/css3点击变色)
     - [千与千寻](https://511446781.github.io/project/千与千寻)
     - [css3点击变色](https://511446781.github.io/project/css3点击变色)
