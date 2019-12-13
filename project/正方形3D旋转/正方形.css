@@ -7,6 +7,7 @@ body {
   height: 300px;
   position: relative;
   margin: 100px auto;
+  margin-top: 200px;
   transform-style: preserve-3d;
   animation: mymove 10s  linear infinite;
   display: flex;

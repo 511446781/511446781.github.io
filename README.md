@@ -14,7 +14,7 @@
    - [淘宝搜索](https://511446781.github.io/project/AJAX/淘宝搜索.html)
    - [网易新闻](https://511446781.github.io/project/AJAX/网易新闻.html)
 + css3
-    - [3d旋转](https://511446781.github.io/project/正方形)
+    - [3d旋转](https://511446781.github.io/project/正方形3D旋转)
     - [loading](https://511446781.github.io/project/loading)
     - [css3点击变色](https://511446781.github.io/project/css3点击变色)
     - [千与千寻](https://511446781.github.io/project/千与千寻)
