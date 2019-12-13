@@ -1,0 +1,166 @@
+body{
+  margin: 0;
+    perspective: 1500px;
+    
+}
+.bigbox{
+    width: 300px;
+    height:300px;
+    // background: rgba(0,0, 0, 0.5);
+    position: relative;
+    margin: 100px auto;
+    transform-style: preserve-3d;
+    // transform: rotateX(45deg);
+    animation:mymove 10s  linear infinite;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    // perspective: 500px;
+
+    .epiboly{
+        width: 100px;
+        height: 100px;
+        // background: red;
+    animation:mymoves 10s  linear infinite;
+
+    transform: rotateY(45deg) rotateX(45deg);
+    transform-style: preserve-3d;
+
+        position: relative;
+        div{
+
+            position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+        }
+        div.smtop{
+                background: rgba(173, 216, 230, 0.418);
+                transform: rotateX(90deg) translateZ(50px);
+                background:url("http://pics.sc.chinaz.com/files/pic/pic9/201911/hpic1670.jpg")
+            }
+            div.smbottom{
+                background: rgba(224, 121, 80, 0.418);
+                transform: rotateX(-90deg) translateZ(50px);
+                background:url("http://pic.sc.chinaz.com/Files/pic/pic9/201911/zzpic20899_s.jpg")
+            }
+            div.smleft{
+                background: rgba(173, 174, 230, 0.418);
+                transform: rotateY(-90deg) translateZ(50px);
+                background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20769.jpg")
+            }
+            div.smright{
+                background: rgba(224, 214, 80, 0.418);
+                transform: rotateY(90deg) translateZ(50px);
+                background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20542.jpg")
+            }
+            div.smfront{
+                background: rgba(173, 230, 190, 0.418);
+                transform: translateZ(50px);
+                background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/bpic14091.jpg")
+            }
+            div.smback{
+                background: rgba(224, 80, 176, 0.418);
+                transform: rotateY(180deg) translateZ(50px);
+                background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/bpic14045.jpg")
+            }
+    }
+    .box{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        
+        
+    }
+    .box.top{
+        background: rgba(173, 216, 230, 0.418);
+        transform: rotateX(90deg) translateZ(150px);
+        background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/bpic14122.jpg");
+        background-size: cover;
+        opacity: 0.5;
+    }
+    .box.bottom{
+        background: rgba(224, 121, 80, 0.418);
+        transform: rotateX(-90deg) translateZ(150px);
+        background:url("http://pics.sc.chinaz.com/files/pic/pic9/201911/zzpic20999.jpg");
+        opacity: 0.5;
+
+        background-size: cover;
+    }
+    .box.left{
+        background: rgba(173, 174, 230, 0.418);
+        transform: rotateY(-90deg) translateZ(150px);
+        background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20759.jpg");
+        opacity: 0.5;
+
+        background-size: cover;
+    }
+    .box.right{
+        background: rgba(224, 214, 80, 0.418);
+        transform: rotateY(90deg) translateZ(150px);
+        background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20660.jpg");
+        opacity: 0.5;
+
+        background-size: cover;
+    }
+    .box.front{
+        background: rgba(173, 230, 190, 0.418);
+        transform: translateZ(150px);
+        background:url("http://pics.sc.chinaz.com/files/pic/pic9/201911/zzpic20850.jpg");
+        opacity: 0.5;
+
+        background-size: cover;
+    }
+    .box.back{
+        background: rgba(224, 80, 176, 0.418);
+        transform: rotateY(180deg) translateZ(150px);
+        background:url("http://pics.sc.chinaz.com/files/pic/pic9/201910/zzpic20663.jpg");
+        opacity: 0.5;
+
+        background-size: cover;
+    }
+    &:hover .top{
+        transform:  rotateX(90deg) translateZ(250px);
+        opacity: 1;
+
+    }
+    &:hover .bottom{
+        transform:   rotateX(-90deg) translateZ(250px);
+        opacity: 1;
+
+    }
+    &:hover .left{
+        transform:  rotateY(-90deg) translateZ(250px);
+        opacity: 1;
+
+    }
+    &:hover .right{
+        transform:  rotateY(90deg)translateZ(250px);
+        opacity: 1;
+
+    }
+    &:hover .front{
+        transform:  translateZ(250px);
+        opacity: 1;
+
+    }
+    &:hover .back{
+        transform:  rotateY(180deg) translateZ(250px);
+        opacity: 1;
+        
+    }
+}
+
+@keyframes mymove
+{
+	from {transform:rotateX(0deg) rotateY(0deg);}
+	to {transform:rotateX(360deg) rotateY(360deg)}
+}
+@keyframes mymoves
+{
+	from {transform:rotateX(0deg) rotateY(0deg) ;}
+	to {transform:rotateX(-360deg) rotateY(-360deg)}
+}
