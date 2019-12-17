@@ -23,3 +23,4 @@
     - [css3旋转放大](https://511446781.github.io/project/css3旋转放大)
 + HTML5
     - [音乐播放器](https://511446781.github.io/project/音乐播放器)
+    - [cavans跟随鼠标](https://511446781.github.io/project/cavans跟随鼠标)
