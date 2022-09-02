@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <canvas id="myCanvas" width="1600" height="1500" style="border:1px solid #d3d3d3;">
+        <div></div>
+</body>
+<script>
+    var c = document.getElementById("myCanvas");
+    var ctx = c.getContext("2d");
+var box=null
+var boy=null
+var zzz=[]
+var barColor = [randomNum(0, 255, true), randomNum(0, 255, true), randomNum(0, 255, true)]
+function randomNum(m, n, int) {
+    if (int) {
+        return Math.floor(Math.random() * (n - m) + m);
+    } else {
+        return Math.random() * (n - m) + m;
+    }
+}
+function randomColor() {
+    return `rgba(${randomNum(50, 200, true)},${randomNum(50, 200, true)},${randomNum(50, 200, true)})`;
+}
+    class ball{
+        constructor(x,y,r,c){
+            this.x=x;
+            this.y=y;
+            this.r=r;
+            this.c=c
+        }
+        draw(){
+            ctx.beginPath();
+            ctx.arc(this.x, this.y, this.r, 0, 2 * Math.PI);
+            ctx.strokeStyle=this.c
+            ctx.stroke();
+        }
+        minish(){
+            this.r=this.r-0.5
+            if (this.r<=0) {
+                this.r=0
+            }
+        }
+        generateSpeed(m,n,int){
+        this.sx = -randomNum(m, n, int) / 3;
+        this.sy = -randomNum(m, n, int);
+    }
+    move(){
+        // this.x+=this.sx
+        this.x-=this.sx
+        // this.y+=this.sy
+        this.y-=this.sy
+    }
+        updateBoll() {
+        this.sy += 0.1;
+        this.r = this.r - 0.02;
+        if (this.r <= 0) {
+            this.r = 0;
+        }
+    }
+    }
+    c.onmousemove = function (e) {
+
+        box=e.pageX
+        boy=e.pageY
+
+if (e.pageY%5==0) {
+    if (e.pageX % 2 == 0) {
+
+        }
+}
+    }
+setInterval(function () {
+    ctx.clearRect(0, 0,1600, 1500);
+    var boll=new ball(box,boy,30,randomColor())
+    zzz.push(boll)
+    boll.draw()
+    boll.minish()
+    boll.generateSpeed(2, 4, false);
+    for (bz of zzz) {
+        bz.move();
+        bz.draw();
+        bz.minish()
+        bz.updateBoll();
+
+    }
+},30)
+
+</script>
+
+</html>

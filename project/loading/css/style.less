@@ -1,0 +1,268 @@
+body { 
+
+	background: #403833;
+	font-family: 'Open Sans';
+	font-weight: 100;
+	color:#f2f2f2;
+	font-size:100%;
+	margin:0em;
+    padding:0em;
+
+    .stage{
+      margin: 50px auto;
+      width: 500px;
+      height: 200px;
+      // background: red;
+      text-align: center;
+      line-height: 50px;
+      color: white;
+      .left{
+        .sture;
+        background: #DB2F00;
+          animation: firstmove 0.5s cubic-bezier(0.25, 0.1, 0.49, 1.2) infinite alternate;
+          
+          .mask{
+  .mask;
+          }
+      }
+      .mask(){
+          border-radius: 50%;
+          background: rgba(0, 0, 0, 0.5);
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+          transform: rotateX(-110deg) translateZ(40px)
+      }
+      .sture(){
+          float: left;
+          width: 50px;
+          height: 50px;
+          position: relative;
+          transform-style: preserve-3d;
+          border-radius: 50%;
+      }
+      
+  .two{
+      .sture;
+      background: #ff6d37;
+      margin-left: 10px;
+      animation: lastmove 0.5s linear
+       0.05s infinite alternate;
+  .mask{
+      .mask;
+  }
+  }
+  .three{
+      .sture;
+      background: #ffa489;
+      margin-left: 10px;
+      animation: lastmove 0.5s linear 0.1s infinite alternate;
+  .mask{
+      .mask;
+  }
+  }
+  .right{
+      .sture;
+      background: #f2f2f2;
+      margin-left: 10px;
+      animation: lastmove 0.5s linear 0.15s infinite alternate;
+  .mask{
+      .mask;
+  }
+  }
+  .five{
+      .sture;
+      background: #99d3d4;
+      margin-left: 10px;
+      animation: lastmove 0.5s linear 0.2s infinite alternate;
+  .mask{
+      .mask;
+  }
+  }
+  .six{
+      .sture;
+      background: #56bebf;
+      margin-left: 10px;
+      animation: lastmove 0.5s linear 0.25s infinite alternate;
+  .mask{
+      .mask;
+  }
+  }
+  .seven{
+      .sture;
+      background: #13A3A5;
+      margin-left: 10px;
+      animation: lastmove 0.5s linear 0.3s infinite alternate;
+  .mask{
+      .mask;
+  }
+  }
+  }
+  @keyframes firstmove{
+      form{
+          transform: translateX(-30px);
+      }
+      to{
+          transform: translateX(30px);
+      }
+  }
+  @keyframes lastmove{
+      form{
+          transform: translateX(20px);
+      }
+      to{
+          transform: translateX(30px);
+      }
+  }
+    .box{
+        position: relative;
+        width: 200px;
+        height: 200px;
+        margin:0 auto;
+        .loader {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align:center;
+        /* disable selection and cursor changes */
+            user-select: none;
+            cursor:default;
+            .text{
+                position: absolute;
+                top: 1.8em;
+                left: 0.4em;
+                z-index:5;
+                font-size: 2em;
+                text-transform: uppercase;
+            animation: text 5.5s cubic-bezier(0.750, 0.000, 0.500, 1.000) infinite normal;
+            }
+            .spinner {
+                position: relative;
+                width: 5em;
+                height: 5em;
+                color:#fff;
+                &::after{
+                    content: "";
+                    position: relative;
+                    display: block;
+                    animation: shadow 5.5s cubic-bezier(0.750, 0.000, 0.500, 1.000) infinite normal;
+        position: relative;
+        bottom: -1.75em;
+        height: .25em;
+        border-radius: 50%;
+        background-color: #322b27;
+                }
+                &::before{
+                    content: "";
+                    position: relative;
+                    display: block;
+                    animation: spinner 5.5s cubic-bezier(0.750, 0.000, 0.500, 1.000) infinite normal;
+        width: 10em;
+        height: 10em;
+        background-color: #DB2F00;
+                }
+            } 
+        }
+    }
+
+    // svg
+  .scene{
+    width: 100%;
+    height: 100%;
+            perspective: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    svg{
+        width: 240px;
+        height: 240px;
+    }
+  }
+  .dc-logo {
+    position: fixed;
+    right: 10px;
+    bottom: 10px;
+  }
+  
+  .dc-logo:hover svg {
+  
+            transform-origin: 50% 50%;
+            animation: arrow-spin 2.5s 0s cubic-bezier(0.165, 0.84, 0.44, 1) infinite;
+  }
+  .dc-logo:hover:hover:before {
+    content: '\2764';
+    padding: 6px;
+    font: 10px/1 Monaco, sans-serif;
+    font-size: 10px;
+    color: #00fffe;
+    text-transform: uppercase;
+    position: absolute;
+    left: -70px;
+    top: -30px;
+    white-space: nowrap;
+    z-index: 20px;
+    box-shadow: 0px 0px 4px #222;
+    background: rgba(0, 0, 0, 0.4);
+  }
+  .dc-logo:hover:hover:after {
+    content: 'Digital Craft';
+    padding: 6px;
+    font: 10px/1 Monaco, sans-serif;
+    font-size: 10px;
+    color: #6E6F71;
+    text-transform: uppercase;
+    position: absolute;
+    right: 0;
+    top: -30px;
+    white-space: nowrap;
+    z-index: 20px;
+    box-shadow: 0px 0px 4px #222;
+    background: rgba(0, 0, 0, 0.4);
+    background-image: none;
+  }
+//   svg
+
+// 进度条
+.cavas{
+    width: 500px;
+    height: 100px;
+    margin: 50px auto
+}
+}
+@keyframes spinner {
+	50%		{ 
+			border-radius: 50%;
+			transform: scale(.5) rotate(360deg);
+			background-color: #13A3A5; }
+	100%	{
+			transform: scale(1) rotate(720deg);
+			background-color: #DB2F00; }
+}
+
+
+/* animation shadow */
+
+
+@keyframes shadow {
+	50%		{ 
+			transform: scale(.5);
+			background-color: #322b27; }
+}
+
+/* animation text */
+
+@keyframes text {
+	0%		{ transform: scale(1,1); }
+	50%		{ transform: scale(.5,.5);}
+	100%	{ transform: scale(1,1); }
+}
+// svg
+
+@keyframes arrow-spin {
+    50% {
+              transform: rotateY(360deg);
+    }
+  }

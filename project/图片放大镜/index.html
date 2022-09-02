@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="stage">
+        <img src="./img/a6.png" alt="">
+        <div class="mask"></div>
+    </div>
+    <style>
+        .stage {
+            width: 400px;
+            margin: 50px auto;
+            background: red;
+            position: relative;
+        }
+
+        .stage img {
+            width: 100%;
+            display: block;
+
+        }
+
+        .stage .mask {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100px;
+            height: 100px;
+            /* background: rebeccapurple; */
+            border: 1px solid red;
+
+            background: url('./img/a6.png') no-repeat;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 100px;
+        }
+
+        .stage .mask::before {
+            content: '+';
+            color: white;
+            font-size: 24px;
+            font-weight: 100;
+        }
+
+        .stage:hover {
+            cursor: none;
+        }
+    </style>
+
+    <script>
+        var stage = document.querySelector('.stage')
+        var mask = document.querySelector('.mask')
+        var zoomLevel = 2
+        // var stageW = stage.offsetWidth
+        // var stageH = stage.offsetHeight
+        var maskW = mask.offsetWidth
+        var maskH = mask.offsetHeight
+
+        mask.style.backgroundSize = stage.offsetWidth * zoomLevel + 'px auto'
+
+        stage.onmousemove = function (event) {
+            mask.style.opacity = 1
+
+            // console.log(event)
+            var x = event.pageX - stage.offsetLeft
+            var y = event.pageY - stage.offsetTop
+
+            if (x < 0 || y < 0 || x > stage.offsetWidth || y > stage.offsetHeight) {
+                mask.style.opacity = 0
+            }
+
+            // mask 跟鼠标
+            // mask.style.left = x - 50 + 'px'
+            mask.style.left = x - maskW / 2 + 'px'
+            mask.style.top = y - 50 + 'px'
+
+            // 
+            // mask.style.backgroundPositionX = -(x - 50 / zoomLevel) * zoomLevel + 'px'
+            mask.style.backgroundPositionX = -(x - maskW / 2 / zoomLevel) * zoomLevel + 'px'
+            // mask.style.backgroundPositionY = -(y - 50 / zoomLevel) * zoomLevel + 'px'
+            mask.style.backgroundPositionY = -(y * zoomLevel - 50) + 'px'
+        }
+    </script>
+</body>
+
+</html>
