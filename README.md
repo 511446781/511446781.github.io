@@ -24,4 +24,4 @@
 + HTML5
     - [音乐播放器](https://511446781.github.io/project/音乐播放器)
     - [cavans跟随鼠标](https://511446781.github.io/project/cavans跟随鼠标)
-    - [小说](https://511446781.github.io/seach.html)
+    - [小说](https://511446781.github.io/小说/seach.html)
