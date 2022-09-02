@@ -1,0 +1,26 @@
+# 项目展示
+ + html&css
+   - [种地](https://511446781.github.io/project/cultivation)
+ + javaScript
+   - [飞机小游戏](https://511446781.github.io/project/飞机)
+   - [图片放大镜](https://511446781.github.io/project/图片放大镜)
++ jQuery
+   - [jq拖拉](https://511446781.github.io/project/jq)
++ bootstsrap
+   - [bootsrap](https://511446781.github.io/project/bootsrap)
+   - [手机](https://511446781.github.io/project/手机)
++ AJAX
+   - [瀑布流图片](https://511446781.github.io/project/AJAX/瀑布流.html)
+   - [淘宝搜索](https://511446781.github.io/project/AJAX/淘宝搜索.html)
+   - [网易新闻](https://511446781.github.io/project/AJAX/网易新闻.html)
++ css3
+    - [3d旋转](https://511446781.github.io/project/正方形3D旋转)
+    - [loading](https://511446781.github.io/project/loading)
+    - [loading2](https://511446781.github.io/project/loading2)
+    - [css3点击变色](https://511446781.github.io/project/css3点击变色)
+    - [千与千寻](https://511446781.github.io/project/千与千寻)
+    - [css3点击变色](https://511446781.github.io/project/css3点击变色)
+    - [css3旋转放大](https://511446781.github.io/project/css3旋转放大)
++ HTML5
+    - [音乐播放器](https://511446781.github.io/project/音乐播放器)
+    - [cavans跟随鼠标](https://511446781.github.io/project/cavans跟随鼠标)

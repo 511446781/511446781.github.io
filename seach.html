@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8"> 
+<title>臭宝宝专属哦</title> 
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js">
+</script>
+<script>
+    var arc=null
+    var book=null
+    var ids=null
+var nub=[]
+    function xxx(arr) {
+        // $('.content').append('<div div class="media" "><div class="media-left"><img class="media-object" src="' + arr
+        //             .data[0].cover + '" alt="..."></div><div class="media-body"><h4 class="media-heading">' + arr
+        //             .data[0].title + '</h4><span>' + arr.data[0].author + '</span></div></div>');
+        for (var index = 0; index < book.data.length; index++)  {
+                 console.log(book.data[index].title);
+
+                $('.content').append('<a href=book.html?"'+book.data[index].fictionId+'"><div class="media" "><div class="media-left"><img class="media-object" src="' + book
+                    .data[index].cover + '" alt="..."></div><div class="media-body"><h4 class="media-heading">' + book
+                    .data[index].title + '</h4><span>' + book.data[index].author + '</span></div></div>');
+
+                    getConsole(index);
+                    // $('.media')[index].click(function(){
+                        console.log('xxx');
+                        nub.push(book.data[index])  
+                        console.log($('.media')[index]);
+                        console.log('https://api.pingcc.cn/fictionChapter/search/'+book.data[index].fictionId+'');
+                    ids=book.data[index].fictionId
+                    // });
+
+
+                    
+
+ 
+function getConsole(index){
+    $('.media')[index].addEventListener("click", function() {
+        console.log(index);
+        $(document).ready(function(){
+ 
+ console.log('xxx');
+ console.log(book);
+ var xhr =  new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+ if(xhr.readyState == 4){
+     if(xhr.status >= 200 && xhr.status < 304 || xhr.status == 304){
+         console.log(xhr.responseText);     
+       console.log(nub);
+
+     }
+ }
+}
+xhr.open('get', 'https://api.pingcc.cn/fictionChapter/search/'+book.data[index].fictionId+'');
+xhr.send(null);
+});
+    });
+     
+}
+
+
+
+            };
+            arc= document.querySelectorAll('.media')
+        }
+$(document).ready(function(){
+    
+  $("button").click(function(){
+    
+    console.log($(".media"));
+    
+    var a=jQuery(".search").val()
+    console.log(a);
+var xhr =  new XMLHttpRequest();
+xhr.onreadystatechange = function () {
+    if(xhr.readyState == 4){
+        if(xhr.status >= 200 && xhr.status < 304 || xhr.status == 304){
+            console.log(xhr.responseText);
+            book=JSON.parse(xhr.responseText)
+            console.log(book);
+            xxx(book)
+        } 
+    }
+}
+xhr.open('get', 'http://api.pingcc.cn/fiction/search/title/'+a+'/1/10');
+xhr.send(null);
+
+  }
+  );
+});
+$(document).ready(function(){
+    
+
+  });
+//  function threeFn(a) {
+//     console.log($('.box'));
+//    return '/xs/ss.html'+a+''
+//  } 
+</script>
+</head>
+<body>
+
+    <div class="container">
+              
+        <div class="row">
+            
+            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                <span class=""></span>
+            </div>
+            
+            <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
+               <div class="box">
+                      <form action="">
+                              <input type="text" class="search">
+                              <button type="button" >搜索</button>
+                          </form>
+                          <ul class="smallbox"></ul>
+                          <!-- <a href='/xs/ss.html${ads}' onclick="threeFn(666)" >跳转</a> -->
+               </div>
+            </div>
+            <div class="content">
+                
+            </div>
+            
+        </div>
+        
+        </div>
+</body>
+</html>
