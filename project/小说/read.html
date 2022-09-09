@@ -156,12 +156,13 @@ window.onscroll = debounce(function () {
   let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
   var winHeight = $(window).height()
   var docHeight = $(document).height()
-  if (scrollTop + winHeight == docHeight) {
+  var nusxdf= scrollTop + winHeight +500
+  console.log(nusxdf);
+  if (nusxdf> docHeight) {
     console.log('滚动条位置：' + scrollTop,winHeight,docHeight);
     last()
     var NumberBook=$(".smbox")
-    console.log(NumberBook);
-    console.log(NumberBook==[]);
+
 if (NumberBook.length>2) {
   $(".container").children().first().remove()
   console.log(NumberBook);
