@@ -23,28 +23,18 @@
 </head>
 
 <body getData()>
-<div>xcjiasdiasdoianfaifaisdmaois</div>
-
     <div class="container">
-
         <div class="row">
-
             <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8">
                 <div class="content">
-                    <div>
-                        <h5>xxxx</h5>
-                    </div>
-                </div>
-                <button class="btn btn-success">获取数据</button>
-            </div>
-
-            <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <div class="right">
-                    <!-- <button class="btn btn-success">获取数据</button> -->
+                    <!-- <div class="details">
+                        <h4>小说名字</h4>
+                        <h5>作者名字</h5>
+                        <img src="http://api.pingcc.cn/fiction/img/特种兵之我稍微有亿点自律/特种兵之我稍微有亿点自律.jpg" alt="">
+                        <p>列兵！你这种品质太了不起了！”“报告首长！我只是稍微比别人自律了一点点而已。”“真的是一点点吗？我看是亿点点吧？”“哪怕是没有系统，我也一样会自律！因为自律，是作为一名军人必须具备的素养！”一个出生在特种兵云集时代的普通战士，通过与生俱来的宝贵品质。谱写精彩的军旅人生。自律对于军人而言，到底有多重要？而这个有亿点点自律的小列兵又将会带给部队怎么样的改变。让我们拭目以待吧。</p>
+                    </div> -->
                 </div>
             </div>
-
-
         </div>
 
     </div>
@@ -70,14 +60,14 @@ function getData(){
 	           if(str.indexOf("%22")<0) return;
 	           arr=str.split("%22");
 	           obj[arr[0]]=arr[1];
-               obs=obj[""]
-	           
+               obs=obj[""]   
+            //    xxxx(xxb)
 	       }
-	   }
+           
 
+	   }
        $(document).ready(function(){
  
- console.log('xxx');
  var xhr =  new XMLHttpRequest();
 xhr.onreadystatechange = function () {
  if(xhr.readyState == 4){
@@ -86,8 +76,9 @@ xhr.onreadystatechange = function () {
          xxb=  xhr.responseText
          var as=JSON.parse(this.response)
        books=as.data.chapterList
-       console.log(books); 
+       xxxx(xxb)
        xxx(books)
+       
        localStorage.string=xxb
      }
  }
@@ -95,65 +86,14 @@ xhr.onreadystatechange = function () {
 xhr.open('get', 'https://api.pingcc.cn/fictionChapter/search/'+obs+'');
 xhr.send(null);
 });
-
        function getConsole(index){
     $('.media')[index].addEventListener("click", function() {
         console.log(index);
-
     });
-   
 }
 
-// window.οnlοad=function(){
-//     getData()
-// },
 	console.log(getData());
-    // document.onready = init(getData())
-       
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        $('button').click(function (e) {
-            console.log("xxx");
-            e.preventDefault();
-            $.ajax({
-    url: 'http://api.pingcc.cn/fiction/search/title/从神王体开始无敌',
-    type: 'get',
-    dataType: 'jsonp',  // 请求方式为jsonp
-    jsonpCallback: "handleCallback",  // 自定义回调函数名
-    data: {}
-    
-})
-console.log(jsonpCallback)
-;
-            // $.get("https://api.apiopen.top/getWangYiNews", {
-            //         page: pageNum,
-            //         count: 5
-            //     },
-            //     function (data, textStatus, jqXHR) {
-            //         // console.log(data);
-
-            //         xxx(data.result)
-            //         pageNum++
-            //     },
-            //     "json"
-            // );
-        });
 
         function xxx(arr) {
             $.each(arr, function (i, e) {
@@ -161,9 +101,16 @@ console.log(jsonpCallback)
                 $('.content').append('<a href=read.html?' +i+
                     ' target="_Self"><h5>'+arr[i].title+'</h5></a>');
 box.push(arr[i])
-                   
+
             });
         }
+        function xxxx(arr) {
+
+                $('.content').append('<a href=read.html?' +0+' target="_Self"><div class="details"><h4>'+JSON.parse(arr).data.title+'</h4><h5>'+JSON.parse(arr).data.author+'</h5><img src="'+JSON.parse(arr).data.cover+'" alt=""><p>'+JSON.parse(arr).data.descs+'</p></div></a>');
+
+
+            };
+
     </script>
 </body>
 

@@ -19,8 +19,7 @@
   </head>
   <body>
         <div class="container">
-xxxx 
-              
+   
               </div>
 <div onclick=" last()">
   下一章
@@ -34,6 +33,7 @@ xxxx
       var obs=null
      var nub=null
      var number=null
+     var bosx=[]
       function getData(){
 	       if(document.URL.indexOf("?")<0) return;//获取当前url地址,如果没参数.直接返回
 	       var str=document.URL.split("?")[1];
@@ -41,6 +41,7 @@ xxxx
          nub=str
 	       var obj={};
 	       var arr;
+        
 	       //当只有一个参数传过来时
 	      //  if(str.indexOf("&")<0){
 	      //      if(str.indexOf("?")<0) return;
@@ -75,13 +76,15 @@ xhr.open('get', 'https://api.pingcc.cn/fictionContent/search/'+JSON.parse(localS
 xhr.send(null);
 });
 	console.log(getData());
+function booKname() {
+  $('.smbox').last().append('<h3>'+JSON.parse(localStorage.string).data.chapterList[nub].title+'</h3>')
+}
      function xxx(arr) {
-            $.each(arr, function (i, e) {
-                //  console.log(arr[i].title);
       
-                  $('.container').append('<p>'+arr[i]+'</p>');
-                
-
+      $('.container').append('<div class="smbox"></div>');
+      booKname()
+            $.each(arr, function (i, e) {
+                  $('.container').children().last().append('<p>'+arr[i]+'</p>');         
             });
         }
 
@@ -105,12 +108,67 @@ xhr.onreadystatechange = function () {
 // var ull=names.data.chapterList[obs].chapterId
 xhr.open('get', 'https://api.pingcc.cn/fictionContent/search/'+JSON.parse(localStorage.string).data.chapterList[nub].chapterId+'');
 xhr.send(null);
-xxx(JSON.parse(xxb).data)
+
 }
 console.log(getData());
 
 
 
+/**
+* 获取滚动条位置
+*/
+function getScrollTop() {
+   var scrollPos;
+   if (window.pageYOffset)
+   {
+       scrollPos = window.pageYOffset;
+   }
+   else if (document.compatMode && document.compatMode != 'BackCompat')
+   {
+       scrollPos = document.documentElement.scrollTop;
+   }
+   else if (document.body)
+   {
+       scrollPos = document.body.scrollTop;
+   }
+   return scrollPos;
+}
+
+/**
+ * 防抖函数
+ * @param method 事件触发的操作
+ * @param delay 多少毫秒内连续触发事件，不会执行
+ * @returns {Function}
+ */
+ function debounce(method,delay) {
+    let timer = null;
+    return function () {
+        let self = this,
+            args = arguments;
+        timer && clearTimeout(timer);
+        timer = setTimeout(function () {
+            method.apply(self,args);
+        },delay);
+    }
+}
+window.onscroll = debounce(function () {
+  let scrollTop = document.body.scrollTop || document.documentElement.scrollTop;
+  var winHeight = $(window).height()
+  var docHeight = $(document).height()
+  if (scrollTop + winHeight == docHeight) {
+    console.log('滚动条位置：' + scrollTop,winHeight,docHeight);
+    last()
+    var NumberBook=$(".smbox")
+    console.log(NumberBook);
+    console.log(NumberBook==[]);
+if (NumberBook.length>2) {
+  $(".container").children().first().remove()
+  console.log(NumberBook);
+}
+    }
+
+
+},500)
 
 
     </script>
